@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" href="icon.png" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1715d9ddd0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <button id="backButton" class="icon-btn">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button id="listButton" class="icon-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+            <img src="thumbnail.png" alt="Thumbnail" class="song-img" id="songImage">
+            <h1 id="songTitle">No Song Selected</h1>
+            <p id="songArtist">Unknown Artist</p>
+            <audio id="audioPlayer"></audio>
+            <input type="range" id="progress" value="0">
+
+            <div class="controls">
+                <button id="prevButton" class="icon-btn">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button id="playPauseButton" class="icon-btn">
+                    <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                </button>
+                <button id="nextButton" class="icon-btn">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+
+            <div id="playlistContainer" class="playlist">
+                <ul id="songList"></ul>
+            </div>
+            <!-- <input type="file" class="accept-btn" id="fileInput" accept="audio/*"> -->
+            <div class="file-info">
+                <p id="fileName">Selected File: None</p>
+                <input type="file" id="fileInput" accept="audio/*" hidden>
+                <label for="fileInput" class="file-btn">Choose Audio File</label>
+                <button id="acceptButton" class="accept-btn">Accept File</button>
+            </div>            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

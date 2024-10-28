@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, blue 0%, rgb(133, 15, 93) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.music-player {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    border: 3px solid #f53192;
+    transition: all 0.3s linear;
+}
+
+.music-player:hover{
+    box-shadow: 0 0 5px 5px #f53192;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.song-img {
+    width: 70%;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid #f53192;
+    transition: all 0.3s linear
+}
+
+.song-img:hover{
+    box-shadow: 0 0 5px 5px #f53192;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-evenly;
+} 
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.playlist {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Styles for file info and custom file input button */
+.file-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#fileName {
+    font-size: 0.9em;
+    /* color: #fefefe; */
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Custom styling for the file input button */
+.file-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    color: #8714bd;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.file-btn:hover {
+    background: linear-gradient(135deg, #a0f0c0, #b0e3f5);
+    transform: scale(1.05);
+}
+
+.accept-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    color: rgb(17, 94, 124);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    font-weight: 700;
+}
+
+.accept-btn:hover {
+    background: linear-gradient(135deg, #ff6a7d, #ff9a9e);
+    transform: scale(1.05);
+}
+
+.accept-btn:active,
+.file-btn:active {
+    transform: scale(0.95);
+}
+
+
+@media (max-width: 600px) {
+    .music-player {
+        padding: 10px;
+    }
+
+    .icon-btn {
+        font-size: 1.2em;
+    }
+
+    .song-img {
+        width: 60%;
+    }
+}
+
+
+
+/* Glowing effect keyframes */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #f53192, 0 0 10px #f53192, 0 0 15px #f53192;
+    }
+    50% {
+        box-shadow: 0 0 10px #f53192, 0 0 20px #f53192, 0 0 30px #f53192;
+    }
+    100% {
+        box-shadow: 0 0 5px #f53192, 0 0 10px #f53192, 0 0 15px #f53192;
+    }
+}
+
+/* Add animation class */
+.glow {
+    animation: glow 1.5s infinite;
+}
